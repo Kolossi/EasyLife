@@ -108,6 +108,7 @@ namespace EasyLife
         private static object ConvertDictionaryArgToString(object a)
         {
             var dict = (System.Collections.IDictionary)a;
+            if (dict ==null || dict.Count == 0) return "{}";
             var strValues = new List<string>(dict.Count);
             foreach (var o in dict.Keys)
             {
@@ -120,12 +121,14 @@ namespace EasyLife
         private static object ConvertEnumerableArgToString(object a)
         {
             var enumerable = a as System.Collections.IEnumerable;
+            if (enumerable == null) return "[]";
             var strValues = new List<string>();
 
             foreach (var o in enumerable)
             {
                 strValues.Add(ConvertArg(o).ToString());
             }
+            if (!strValues.Any()) return "[]";
             object newArg = string.Format("[{0}]", string.Join(",", strValues));
             return newArg;
         }

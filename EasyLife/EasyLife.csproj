@@ -4,14 +4,14 @@
     <TargetFramework>netstandard1.3</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Authors />
+    <Authors>Kolossi</Authors>
     <Company>Kolossi</Company>
     <Description>Utilities for an easy life programming in the null-laden world of C#</Description>
     <RepositoryUrl>https://github.com/Kolossi/EasyLife</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/Kolossi/EasyLife/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
     <PackageId>Kolossi.EasyLife</PackageId>
     <PackageTags>Kolossi EasyLife Easy EmptyLinq Linq ConsoleLogger</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
 </Project>
