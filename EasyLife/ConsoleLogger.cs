@@ -47,7 +47,7 @@ namespace EasyLife
 
         public static void LogLine(object arg)
         {
-            if (Enabled) Console.WriteLine(ConvertEnumerableArgToString(arg));
+            if (Enabled) Console.WriteLine(ConvertArg(arg));
         }
 
         public static void LogLine()
@@ -112,9 +112,9 @@ namespace EasyLife
             var strValues = new List<string>(dict.Count);
             foreach (var o in dict.Keys)
             {
-                strValues.Add(string.Format("{{0}:{1}}",ConvertArg(o).ToString(),ConvertArg(dict[o]).ToString()));
+                strValues.Add(string.Format("{{{0}:{1}}}",ConvertArg(o).ToString(),ConvertArg(dict[o]).ToString()));
             }
-            object newArg = string.Format("{{0}}", string.Join(",", strValues));
+            object newArg = string.Format("{{{0}}}", string.Join(",", strValues));
             return newArg;
         }
 
